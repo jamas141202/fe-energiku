@@ -1,0 +1,209 @@
+
+.slick-prev,
+.slick-next {
+  background-color: black !important;
+  border-radius: 50%;
+  color: white !important;
+  opacity: 1 !important;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: white;
+  font-size: 16px;
+}
+
+.slick-dots {
+  color: #EE9F26; /* Change active dot color to match theme */
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  .slick-prev,
+  .slick-next {
+    width: 25px;
+    height: 25px;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 12px;
+  }
+
+  .slick-dots li button:before {
+    font-size: 8px; /* Smaller dots for mobile */
+  }
+
+  .slick-dots {
+    bottom: -10px; /* Adjust dot positioning for smaller screens */
+  }
+}
+
+/* Font adjustments for mobile */
+.font-la-belle-aurore {
+  font-family: 'La Belle Aurore', cursive;
+  font-size: 14px; /* Reduce font size for mobile */
+}
+
+
+/* Media queries untuk tampilan mobile */
+/* Media Queries untuk Mobile */
+@media screen and (max-width: 768px) {
+  /* Header */
+  header {
+    padding: 10px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    position: fixed;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    transition: 0.3s;
+  }
+
+  nav ul.active {
+    left: 0;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  /* Features Section */
+  .features {
+    padding: 40px 20px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .feature-card {
+    padding: 15px;
+  }
+
+  /* About Section */
+  .about {
+    padding: 40px 20px;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-text {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .about-image {
+    width: 100%;
+  }
+
+  /* Contact Section */
+  .contact {
+    padding: 40px 20px;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  /* Footer */
+  footer {
+    padding: 20px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links {
+    margin: 20px 0;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}
+
+/* Media Queries untuk tablet */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-content {
+    gap: 30px;
+  }
+
+  .about-text,
+  .about-image {
+    width: 48%;
+  }
+}
+
+/* Tambahan untuk menu hamburger pada mobile */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 2px 0;
+    transition: 0.3s;
+  }
+
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
